@@ -1,0 +1,16 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fps-game-4554
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: fps-game-4554
+  template:
+    spec:
+      containers:
+      - name: fps-game-4554
+        image: ahve/fps-game-4554:latest
+        ports:
+        - containerPort: 5000
